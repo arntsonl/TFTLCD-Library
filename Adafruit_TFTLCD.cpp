@@ -14,9 +14,14 @@
 #include <avr/pgmspace.h>
 #endif
 #include "Adafruit_TFTLCD.h"
+
+#if !defined(ARDUINO_STM32_FEATHER) && !defined(ARDUINO_UNOR4_WIFI)
+#if !defined(ARDUINO_UNOR4_MINIMA)
 #include "pin_magic.h"
 #include "pins_arduino.h"
 #include "wiring_private.h"
+#endif
+#endif
 
 //#define TFTWIDTH   320
 //#define TFTHEIGHT  480
